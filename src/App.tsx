@@ -661,7 +661,7 @@ export default function App() {
 
   if (screen === 'detail' && selectedSession) {
     const s = selectedSession;
-    const d = new Date(s.startTime);
+    const d = new Date(s.startTime);  
     const mins = parseInt(s.fitness?.duration || '0') || Math.floor((s.elapsed||0)/60);
     const sentCount    = s.boulders.filter(b => b.status === 'sent').length;
     const flashedCount = s.boulders.filter(b => b.status === 'flashed').length;
